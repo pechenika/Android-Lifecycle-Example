@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Android Lifecycle</string>
+    <string name="button_transparent">Transparent activity</string>
+    <string name="button_third_act">Third activity</string>
+    <string name="transparent">Transparent</string>
+    <string name="third">Third</string>
+    <string name="main">Main</string>
 </resources>

@@ -1,8 +1,11 @@
 package com.pechenika.androidlifecycle
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -47,5 +50,19 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
 
         Toast.makeText(applicationContext, "MainActivity: onDestroy", Toast.LENGTH_SHORT).show()
+    }
+
+    fun buttonTransparent(view: View) {
+        Toast.makeText(applicationContext, "MainActivity: buttonTransparent", Toast.LENGTH_SHORT).show()
+
+        val intent = Intent(this, TransparentActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun buttonThird(view: View) {
+        Toast.makeText(applicationContext, "MainActivity: buttonThird", Toast.LENGTH_SHORT).show()
+
+        val intent = Intent(this, ThirdActivity::class.java)
+        startActivity(intent)
     }
 }
