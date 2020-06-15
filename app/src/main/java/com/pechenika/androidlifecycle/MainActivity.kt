@@ -52,14 +52,14 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(applicationContext, "MainActivity: onDestroy", Toast.LENGTH_SHORT).show()
     }
 
-    fun buttonTransparent() {
+    fun buttonTransparent(view: View) {
         Toast.makeText(applicationContext, "MainActivity: buttonTransparent", Toast.LENGTH_SHORT).show()
 
         val intent = Intent(this, TransparentActivity::class.java)
         startActivity(intent)
     }
 
-    fun buttonThird() {
+    fun buttonThird(view: View) {
         Toast.makeText(applicationContext, "MainActivity: buttonThird", Toast.LENGTH_SHORT).show()
 
         val intent = Intent(this, ThirdActivity::class.java)
