@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -14,6 +15,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         Toast.makeText(applicationContext, "MainActivity: onCreate", Toast.LENGTH_SHORT).show()
+
+        val testFragment = TestFragment()
+
+        supportFragmentManager.beginTransaction()
+            .add(R.id.fl_fragment_container, testFragment)
+            .commit()
     }
 
     override fun onStart() {
